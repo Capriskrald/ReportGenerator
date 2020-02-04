@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ReportGenerator
 {
-    class Program
+    public interface ICompileBehavior
     {
-        static void Main(string[] args)
-        {
-        }
+        void CompileReport();
     }
 }

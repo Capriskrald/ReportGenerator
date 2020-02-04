@@ -1,5 +1,10 @@
 ﻿using System;
 
+// Class diagrams:
+// https://imgur.com/VKULZJh
+// Responsibilities: 
+//                  - ReportGenerator: CompileReport() currently has two responsibilites nameFirst and salaryFirst
+
 namespace ReportGenerator
 {
     internal class ReportGeneratorClient

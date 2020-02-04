@@ -9,12 +9,15 @@ namespace ReportGenerator
         SalaryFirst
     }
 
-    internal class ReportGenerator
+    abstract class ReportGenerator : ICompileBehavior
     {
         private readonly EmployeeDB _employeeDb;
         private ReportOutputFormatType _currentOutputFormat;
+        private ICompileBehavior compileBehavior;
 
-
+        public ReportGenerator()
+        {
+        }
 
         public ReportGenerator(EmployeeDB employeeDb)
         {
@@ -23,51 +26,8 @@ namespace ReportGenerator
             _employeeDb = employeeDb;
         }
 
+        public abstract void CompileReport();
 
-        public void CompileReport()
-        {
-            var employees = new List<Employee>();
-            Employee employee;
-
-            _employeeDb.Reset();
-
-            // Get all employees
-            while ((employee = _employeeDb.GetNextEmployee()) != null)
-            {
-                employees.Add(employee);
-            }
-
-            // All employees collected - let's output them
-            switch (_currentOutputFormat)
-            {
-                case ReportOutputFormatType.NameFirst:
-                    Console.WriteLine("Name-first report");
-                    foreach (var e in employees)
-                    {
-                        Console.WriteLine("------------------");
-                        Console.WriteLine("Name: {0}", e.Name);
-                        Console.WriteLine("Salary: {0}", e.Salary);
-                        Console.WriteLine("------------------");
-                    }
-                    break;
-
-                case ReportOutputFormatType.SalaryFirst:
-                    Console.WriteLine("Salary-first report");
-                    foreach (var e in employees)
-                    {
-                        Console.WriteLine("------------------");
-                        Console.WriteLine("Salary: {0}", e.Salary);
-                        Console.WriteLine("Name: {0}", e.Name);
-                        Console.WriteLine("------------------");
-                    }
-                    break;
-            }
-        }
-
-
-        public void SetOutputFormat(ReportOutputFormatType format)
-        {
-            _currentOutputFormat = format;
-        }
+        public abstract void SetOutputFormat(ReportOutputFormatType format);
     }
 }
