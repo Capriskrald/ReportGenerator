@@ -10,13 +10,6 @@ namespace ReportGenerator
     {
         static void Main(string[] args)
         {
-
-
-
-
-
-
-
         }
     }
 }
