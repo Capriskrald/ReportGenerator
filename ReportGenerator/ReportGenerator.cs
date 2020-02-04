@@ -15,6 +15,7 @@ namespace ReportGenerator
         private ReportOutputFormatType _currentOutputFormat;
 
 
+
         public ReportGenerator(EmployeeDB employeeDb)
         {
             if (employeeDb == null) throw new ArgumentNullException("employeeDb");

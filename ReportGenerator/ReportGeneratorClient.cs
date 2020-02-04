@@ -9,6 +9,7 @@ namespace ReportGenerator
             var db = new EmployeeDB();
 
             // Add some employees
+
             db.AddEmployee(new Employee("Anne", 3000));
             db.AddEmployee(new Employee("Berit", 2000));
             db.AddEmployee(new Employee("Christel", 1000));
