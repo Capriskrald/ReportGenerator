@@ -12,7 +12,6 @@ namespace ReportGenerator
             Salary = salary;
         }
 
-
         public string Name { get; private set; }
         public uint Salary { get; private set; }
     }

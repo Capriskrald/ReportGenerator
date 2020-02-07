@@ -1,10 +1,5 @@
 ﻿using System;
 
-// Class diagrams:
-// https://imgur.com/VKULZJh
-// Responsibilities: 
-//                  - ReportGenerator: CompileReport() currently has two responsibilites nameFirst and salaryFirst
-
 namespace ReportGenerator
 {
     internal class ReportGeneratorClient
@@ -14,7 +9,6 @@ namespace ReportGenerator
             var db = new EmployeeDB();
 
             // Add some employees
-
             db.AddEmployee(new Employee("Anne", 3000));
             db.AddEmployee(new Employee("Berit", 2000));
             db.AddEmployee(new Employee("Christel", 1000));

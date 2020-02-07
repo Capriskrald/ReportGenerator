@@ -13,7 +13,6 @@ namespace ReportGenerator
             Reset();
         }
 
-
         public void Reset()
         {
             _currentEmployeeIndex = 0;

@@ -43,9 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ReportGeneratorNameFirst.cs" />
-    <Compile Include="ReportGeneratorSalaryFirst.cs" />
-    <Compile Include="ICompileBehavior.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
